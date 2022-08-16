@@ -1,0 +1,59 @@
+.translator-input {
+  width: 400px;
+  height: 200px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  border: none;
+  padding: 15px;
+  white-space: normal;
+
+  &__textarea {
+    width: 100%;
+    height: 85%;
+    border: none;
+    resize: none;
+    background-color: antiquewhite;
+    font-size: 30px;
+
+
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .window-input {
+    width: 450px;
+  }
+}
+
+.translator-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+
+  &__copy-paste-block {
+    &:hover {
+      color: cadetblue;
+    }
+  }
+}
+
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(138,196,238,0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+

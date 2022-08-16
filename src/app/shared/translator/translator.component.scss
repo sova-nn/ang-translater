@@ -1,0 +1,30 @@
+.translator-windows {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  background-color: lightblue;
+  border-radius: 20px;
+  padding: 40px 25px;
+}
+
+.translate-button {
+  margin: 15px 0;
+  img {
+    width: 75px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .translator-windows {
+    flex-direction: row;
+  }
+
+  .translate-button {
+    img {
+      transform: rotate(-90deg);
+    }
+  }
+}

@@ -1,0 +1,2 @@
+export const API_TOKEN = 't1.9euelZrJkMqZzI7JyJCayJabkJ6XkO3rnpWaiYnKlpaWkc6TzsyJnI3Mzszl8_ctPRdo-e87PykV_d3z921rFGj57zs_KRX9.Sy6oO4KrgfNI2i6r3g2wM16-mmyXHZLZhfMTZmy_kNgv6SoZbXYwK_t3IEHsfldEF0pQ-q4UZSKV_jtPYHYkCQ';
+export const API_FOLDER_ID = 'b1gs9iqs3h99m9ln18ic';

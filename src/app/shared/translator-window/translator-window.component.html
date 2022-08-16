@@ -1,0 +1,22 @@
+<app-language-choose (languageSelected)="onChangeTranslateLang($event)"></app-language-choose>
+<div class="translator-header">
+  <div>
+    {{text ? text.length : 0}}/500
+  </div>
+  <div class="translator-header__copy-paste-block" (click)="onTextCopy()">Копировать в буфер</div>
+  <ng-container *ngIf="isTranslateTextInput">
+    <div class="translator-header__copy-paste-block" (click)="onTextPaste()">Вставить из буфера</div>
+  </ng-container>
+</div>
+<div class="translator-input">
+  <textarea
+    class="translator-input__textarea"
+    rows="5"
+    maxlength="500"
+    (change)="onChangeTranslateText($event)"
+    [(ngModel)]="text"
+    [disabled]="!isTranslateTextInput"
+  ></textarea>
+</div>
+
+

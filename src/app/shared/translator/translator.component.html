@@ -1,0 +1,14 @@
+<div class="translator-windows">
+  <app-translator-window [isTranslateTextInput]="true"
+                         (translateDataChanged)="changeRequestTranslateData($event)"
+  ></app-translator-window>
+  <div>
+    <button class="translate-button" (click)="onTranslate()"><img alt="" src="assets/back-arrow.png" /></button>
+  </div>
+  <app-translator-window [text]="interpretation"
+                         (translateDataChanged)="changeResponseTranslateLang($event.lang)"
+  ></app-translator-window>
+</div>
+
+
+

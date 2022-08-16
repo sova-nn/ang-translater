@@ -1,0 +1,13 @@
+<header>
+  <img class="activator" id="activator" src="{{selectedLanguage | languageURL}}" alt=""
+  (click)="onCardClick()" #activator>
+  <nav #nav>
+    <ul #ul>
+      <li *ngFor="let lang of languages" (click)="selectLanguage(lang)">
+        <a href="#">
+          <img alt="" src="{{lang | languageURL}}" #imgs>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
