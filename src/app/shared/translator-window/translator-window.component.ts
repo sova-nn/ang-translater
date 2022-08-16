@@ -20,7 +20,7 @@ export class TranslatorWindowComponent implements OnInit {
     private clipboard: Clipboard
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.translateData = {
       text: '',
       lang: this.lang,
@@ -28,7 +28,7 @@ export class TranslatorWindowComponent implements OnInit {
     }
   }
 
-  onTextPaste() {
+  onTextPaste(): void {
     navigator.clipboard.readText().then(
       text => {
         this.text = text;
@@ -45,11 +45,11 @@ export class TranslatorWindowComponent implements OnInit {
       );
   }
 
-  onTextCopy() {
+  onTextCopy(): void {
     this.clipboard.copy(this.text);
   }
 
-  onChangeTranslateLang(lang: string) {
+  onChangeTranslateLang(lang: string): void {
     this.translateData = {
       ...this.translateData,
       lang: lang,

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from "../../services/translate.service";
 import { GetTranslationInterface, TranslationItem } from "../../interfaces/getTranslation.interface";
 import { catchError, Subject, switchMap, throwError } from "rxjs";
-import { TranslateDataRequest } from "../../interfaces/translateData.interface";
+import {TranslateData, TranslateDataRequest} from "../../interfaces/translateData.interface";
 import { NotificationComponent } from "../notification/notification.component";
 import { MatDialog } from "@angular/material/dialog";
 
@@ -44,7 +44,7 @@ export class TranslatorComponent implements OnInit, OnDestroy {
       });
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.textToTranslate$.unsubscribe();
   }
 
@@ -61,7 +61,7 @@ export class TranslatorComponent implements OnInit, OnDestroy {
     }
   }
 
-  changeRequestTranslateData(data: any): void {
+  changeRequestTranslateData(data: TranslateData): void {
     this.translationRequest = {
       ...this.translationRequest,
       text: data.text,

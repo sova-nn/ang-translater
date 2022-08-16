@@ -31,19 +31,17 @@ export class LanguageChooseComponent implements OnInit, AfterViewInit {
 
   @Output() languageSelected = new EventEmitter<string>();
 
-  constructor() {}
-
   ngOnInit(): void {
     this.languages = this.getFilteredLanguage(this.selectedLanguage);
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.createAnimate();
   }
 
-  onCardClick() {
+  onCardClick(): void {
     this.toggle = !this.toggle;
-    return (this.toggle ? this.tl.play() : this.tl.reverse());
+    this.toggle ? this.tl.play() : this.tl.reverse();
   }
 
   createAnimate(): void {
